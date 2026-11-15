@@ -1,0 +1,10 @@
+# virtual environment and system files
+venv/
+__pycache__/
+.DS_Store
+
+# Raw and processed review text stays on my laptop (not republished)
+*.csv
+# ...but the aggregated results are public
+!ranking.csv
+!monthly_trend.csv
