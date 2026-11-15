@@ -1,0 +1,4 @@
+rank,bank,reviews,avg_rating,margin_of_error,positive_pct,negative_pct,net_sentiment,avg_text_score
+1,Revolut,9795,4.0,0.03,74.9,22.7,52.2,0.335
+2,Liv X,507,3.48,0.16,60.9,35.7,25.2,0.208
+3,DBS digibank,1580,2.92,0.09,46.1,50.1,-4.0,0.083
