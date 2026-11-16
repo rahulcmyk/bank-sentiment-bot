@@ -69,6 +69,9 @@ python3 priority.py --csv reviews_NAME.csv --bank "HSBC UK" --start 2026-05-25 -
 | `teardown.py` | Summary, 20+ character robustness check, complaint and praise themes, monthly averages with margins of error, random review samples. `--extra "Theme=regex"` adds a custom theme |
 | `priority.py` | Ranks complaint themes by reach x severity / effort. Money columns appear only if you pass `--users` and `--revenue-per-user`, and they are illustrative |
 | `themes.py` | The shared keyword lists |
+| `dashboard.py` | Streamlit dashboard over the `teardown_*` folders (overview, themes, monthly trend, priority). Run `streamlit run dashboard.py` |
+| `fetch_claims.py` | Saves each app's own Google Play text (title, summary, description) |
+| `claims_check.py` | Marketing message tester: for six promises (fast, easy, secure, reliable, rewards and low cost, support) it compares what the app claims with how many 4-5 star reviews say it is kept and how many 1-2 star reviews say it is broken. Keyword rules, so treat counts as rough and compare within one app |
 
 ## Checks and mistakes I caught
 
@@ -93,6 +96,7 @@ python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 bash run_all.sh
+# optional dashboard: pip install streamlit altair, then streamlit run dashboard.py
 ```
 
 Google Play data changes over time, so a new run will give slightly different numbers. The date window is set inside `make_clean.py`.
@@ -104,8 +108,8 @@ Raw review text is not published in this repository. It was collected for person
 ## Next
 
 - Add App Store and Trustpilot reviews for more volume
-- Dashboard (Streamlit) over the teardown outputs
-- Marketing message tester: do a bank's promises match what customers say?
+- Run the marketing message tester on more apps
+- Add a dashboard screenshot (not the Samples tab, which shows review text)
 - Free local AI model for summaries
 
 ## Author
