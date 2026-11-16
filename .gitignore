@@ -8,3 +8,7 @@ __pycache__/
 # ...but the aggregated results are public
 !ranking.csv
 !monthly_trend.csv
+
+
+# teardown folders contain review text samples
+teardown_*/
